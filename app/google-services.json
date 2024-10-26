@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "80393441506",
+    "project_id": "coroutinetest-1145e",
+    "storage_bucket": "coroutinetest-1145e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80393441506:android:7d8aec5bd748799b140ebb",
+        "android_client_info": {
+          "package_name": "com.nta.gitrepotest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRaZFgrsHdhTfwVls1W81gTUuDRbm2Gg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

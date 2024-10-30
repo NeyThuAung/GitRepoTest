@@ -10,6 +10,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.nta.gitrepotest.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -101,6 +103,20 @@ class MainActivity : AppCompatActivity() {
                     startActivity(it)
                     finish()
                 }
+            }
+        }
+
+        val handler = CoroutineExceptionHandler { _, throwable ->
+            println("Exception handled: throwable")
+        }
+        CoroutineScope(Dispatchers.IO + handler ).launch {
+            launch {
+                delay(300L)
+                throw Exception("Coroutine 1 Error!")
+            }
+            launch {
+                delay(300L)
+                println("Coroutine 2 finished")
             }
         }
 

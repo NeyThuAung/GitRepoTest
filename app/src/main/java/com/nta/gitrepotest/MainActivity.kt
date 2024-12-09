@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -88,6 +89,11 @@ class MainActivity : AppCompatActivity() {
 //            }
 //            Log.d(TAG, "Request took $time ms.")
 //        }
+
+        binding.ccpPhone.setOnClickListener {
+            val countryCode = binding.ccpPhone.selectedCountryCode()
+            Toast.makeText(this, "Country Code: $countryCode", Toast.LENGTH_SHORT).show()
+        }
 
         binding.btnNextActivity.setOnClickListener{
             lifecycleScope.launch {

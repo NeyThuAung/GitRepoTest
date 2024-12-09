@@ -26,4 +26,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+
+    <com.ak.ui.CountryCodePicker
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ccp_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:contentColor="@color/black"
+        app:fontFamily="@font/montserrat_medium"
+        app:showFlag="true"
+        android:gravity="center"
+        app:defaultNameCode="in"
+        app:showArrowDown="true"
+        app:showNameCode="false"
+        app:arrowSize="@dimen/_20sdp"
+        app:textSize="@dimen/_12ssp"
+        app:excludedCountries="ad,ae"
+        tools:ignore="MissingClass" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
